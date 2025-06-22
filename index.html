@@ -3,86 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prince Vaishya</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Prince Vaishya - Portfolio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script defer src="static/js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-    <!-- header is here -->
-    <header>
-        <!-- navigation bar starts here -->
-        <nav>
-            <!-- <div class="dropdown">
-                <button class="dropdown-btn"><i class="fas fa-bars"></i></button>
-                <div class="dropdown-content">
-                    <!-- this is where the contents of dropdown bar are -->
-                    <!-- <a href="#about">About</a>
-                    <a href="#projects">Projects</a> -->
-                    <!-- <a href="https://www.linkedin.com/in/princevaishya/" target="_blank">Contact</a>
-                </div>
-            </div> -->
-            <!-- logo for navigation bar is here -->
-            <!-- <div class="logo">
-                <img src="images/nasa-logo.svg" alt="logo">
-            </div> -->
-            
-            <!-- search button manipulation can be done here -->
-            <!-- <div class="search">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-            </div> -->
-        </nav>
-
-
-    </header>
-
-    <div class="profile-header">
-        <img src="images/1746645431958.jpg" alt="Prince Vaishya" class="profile-image">
-        <div class="name-container">
-            <h1>Prince Vaishya</h1>
-            <p>Aspiring Data Scientist and Machine Learning Enthusiast</p>
-            <a href="https://www.linkedin.com/in/princevaishya/" target="_blank" class="linkedin-link" style="margin: 4%;">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            
-        </div>
+    <!-- Header / Navigation -->
+<header>
+    <div class="logo">
+        <img src="static/images/logo2.svg" alt="Prince Vaishya Logo">
     </div>
 
+    <!-- Hamburger for mobile (doesn't interfere with flex layout) -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 
-    
 
+    <!-- Home Section -->
+    <section id="home">
+        <div class="intro" class="reveal">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1><span class="typing-text"></span></h1>
+            <br>
+        </div>
+    </section>
     <br>
     <br>
     <br>
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <!-- About Me Section -->
+    <section id="about" class="reveal">
+        <h2>About Me</h2>
+        <p>I am an aspiring Data Scientist with a strong passion for Artificial Intelligence and Machine Learning. Currently pursuing my education from the University of West of England, I have been actively engaging in projects and challenges that enhance my understanding of data structures and algorithms. My commitment to continuous learning is evident through my participation in initiatives like the #30DaysDSA Challenge, where I delve into complex problems to sharpen my coding skills and problem-solving abilities.</p>
 
-    <h1>Summary</h1>
-    <p>I am an aspiring Data Scientist with a strong passion for Artificial Intelligence and Machine Learning. Currently pursuing my education from the University of West of England, I have been actively engaging in projects and challenges that enhance my understanding of data structures and algorithms. My commitment to continuous learning is evident through my participation in initiatives like the #30DaysDSA Challenge, where I delve into complex problems to sharpen my coding skills and problem-solving abilities.</p>
+    </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!-- Skills Section -->
+<section id="skills" class="reveal">
+    <h2>Skills & Interests</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <label>Data Science & Machine Learning</label>
+                <div class="progress-bar"><div class="progress" data-progress="90%"></div></div>
+            </div>
 
-    <br>
-    <br>
+            <div class="skill">
+                <label>Digital Marketing</label>
+                <div class="progress-bar"><div class="progress" data-progress="75%"></div></div>
+            </div>
 
-    <h1>Personal</h1>
-    <p>My journey into the world of AI and data science is driven by an insatiable curiosity and a desire to push the boundaries of what's possible. I find immense satisfaction in unraveling complex problems and transforming data into actionable insights. Beyond academics, I am a proactive learner who thrives on challenges that test my analytical and logical reasoning skills. I believe in the power of technology to drive change and am committed to contributing meaningfully to this dynamic field.</p>
-    <br>
-    <br>
+            <div class="skill">
+                <label>Video Editing</label>
+                <div class="progress-bar"><div class="progress" data-progress="80%"></div></div>
+            </div>
 
-    <h1>Awards and Honors</h1>
-    <p>Earned certifications in Microsoft AI Classroom Series, Google Search Ads, and Microsoft Ads, showcasing a well-rounded skill set in both AI and digital marketing domains.Successfully completed a 30-day challenge focusing on data structures and algorithms, tackling problems ranging from binary search techniques to complexity analysis.</p>
-    <br>
-    <br>
+            <div class="skill">
+                <label>Economics & Business Analysis</label>
+                <div class="progress-bar"><div class="progress" data-progress="70%"></div></div>
+            </div>
 
-    <!-- <h1>PDF Biography</h1>
-    <p>
-        <a href="#pdf">Prince, Vaishya</a>
-    </p> -->
+            <div class="skill">
+                <label>Music & Instruments</label>
+                <div class="progress-bar"><div class="progress" data-progress="60%"></div></div>
+            </div>
 
-    <footer>
-        <p>&copy; 2025 All Rights Reserved.</p>
-    </footer>
+            <div class="skill">
+                <label>Astronomy</label>
+                <div class="progress-bar"><div class="progress" data-progress="85%"></div></div>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+</section>
+
+<br>
+<br>
+<br>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="reveal">
+        <h2>Portfolio</h2>
+        <p>Here’s a showcase of some of the work I’ve done, ranging from data analysis projects to video editing and digital marketing campaigns. Check them out!</p>
+        <!-- Add images, project descriptions, or links to external projects -->
+            <div class="project-grid">
+  
+            <!-- Project Template -->
+            <div class="project-card reveal">
+                <div class="project-info">
+                <h3>Stock Price Predictor</h3>
+                <p>A simple LSTM model predicting stock prices using historical data.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/example/stock-predictor" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <button class="view-details">View</button>
+                </div>
+                <div class="project-details">
+                    <ul>
+                    <li><strong>Tech:</strong> Python, Keras, Pandas, Matplotlib</li>
+                    <li><strong>Features:</strong> Time series forecasting with LSTM</li>
+                    <li><strong>Dataset:</strong> Yahoo Finance</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+            <!-- You can copy & paste the above block for other projects -->
+            <!-- project 2  -->
+                        <div class="project-card reveal">
+                <div class="project-info">
+                <h3>Stock Price Predictor</h3>
+                <p>A simple LSTM model predicting stock prices using historical data.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/example/stock-predictor" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <button class="view-details">View</button>
+                </div>
+                <div class="project-details">
+                    <ul>
+                    <li><strong>Tech:</strong> Python, Keras, Pandas, Matplotlib</li>
+                    <li><strong>Features:</strong> Time series forecasting with LSTM</li>
+                    <li><strong>Dataset:</strong> Yahoo Finance</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+            <!-- project 3 -->
+                        <div class="project-card reveal">
+                <div class="project-info">
+                <h3>Stock Price Predictor</h3>
+                <p>A simple LSTM model predicting stock prices using historical data.</p>
+                <div class="project-actions">
+                    <a href="https://github.com/example/stock-predictor" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <button class="view-details">View</button>
+                </div>
+                <div class="project-details">
+                    <ul>
+                    <li><strong>Tech:</strong> Python, Keras, Pandas, Matplotlib</li>
+                    <li><strong>Features:</strong> Time series forecasting with LSTM</li>
+                    <li><strong>Dataset:</strong> Yahoo Finance</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+    </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch with me for projects or opportunities, fill out the form below.</p>
+        <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Your Name" required>
+            <input type="email" name="user_email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="form-status"></p>
+            <a href="static/files/resume.pdf" class="resume-btn" download>
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+    </section>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!-- Footer Section -->
+<footer>
+    <div class="social-icons">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+    <p>© 2025 Prince Vaishya</p>
+</footer>
+
+
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 </body>
 </html>
