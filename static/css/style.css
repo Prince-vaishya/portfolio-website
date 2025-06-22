@@ -554,3 +554,30 @@ footer {
     background: black; /* You can use transparent if needed */
 }
 
+/* Position hamburger icon on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        top: 20px; /* Adjust this value to your liking */
+    }
+}
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        transform: translateY(-100%); /* Start off-screen */
+        transition: transform 0.3s ease-in-out;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        padding: 12px 0;
+    }
+
+    header nav ul.active {
+        transform: translateY(0); /* Slide in */
+    }
+}

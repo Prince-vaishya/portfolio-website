@@ -220,3 +220,12 @@ function drawStars() {
 drawStars();
 
 
+// Close hamburger menu when any link is clicked
+document.querySelectorAll('header nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', () => {
+        if (window.innerWidth <= 768) { // Close only on mobile view
+            navUl.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+});
