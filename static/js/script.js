@@ -82,20 +82,20 @@ window.addEventListener("scroll", () => {
 });
 
 // EmailJS form handler
-emailjs.init("Aj2fH2wIebqXVUY1H"); // Replace with your Public Key
+// emailjs.init("Aj2fH2wIebqXVUY1H"); // Replace with your Public Key
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
+// document.getElementById("contact-form").addEventListener("submit", function(e) {
+//     e.preventDefault();
     
-    emailjs.sendForm("service_jdd7y4f", "template_7mhah0r", this)
-        .then(() => {
-            document.getElementById("form-status").textContent = "Message sent successfully!";
-            this.reset();
-        }, (error) => {
-            document.getElementById("form-status").textContent = "Oops! Something went wrong.";
-            console.error(error);
-        });
-});
+//     emailjs.sendForm("service_jdd7y4f", "template_7mhah0r", this)
+//         .then(() => {
+//             document.getElementById("form-status").textContent = "Message sent successfully!";
+//             this.reset();
+//         }, (error) => {
+//             document.getElementById("form-status").textContent = "Oops! Something went wrong.";
+//             console.error(error);
+//         });
+// });
 
 const backToTopBtn = document.getElementById("back-to-top");
 
