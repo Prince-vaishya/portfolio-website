@@ -535,12 +535,14 @@ footer {
     font-weight: bold;
     color: white;
     text-align: center;
-    margin-top: 40px;
+    margin-top: -30px; /* Move the text up */
+    position: relative; /* Make it easier to control its position */
 }
 
 @media (max-width: 600px) {
     .typing-text {
         font-size: 1.6rem;
+        margin-top: -20px; /* Adjust for smaller screens */
     }
 }
 
