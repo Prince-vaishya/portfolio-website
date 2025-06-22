@@ -229,3 +229,25 @@ document.querySelectorAll('header nav ul li a').forEach(anchor => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const progressBars = document.querySelectorAll('.progress');
+
+    const progressObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progress = entry.target;
+                const targetWidth = progress.getAttribute('data-progress'); // Get the data-progress attribute
+                progress.style.width = targetWidth; // Set the width of the progress bar
+                observer.unobserve(progress); // Stop observing once the animation is triggered
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the progress bar is visible
+    });
+
+    progressBars.forEach(bar => {
+        progressObserver.observe(bar);
+    });
+});
+
