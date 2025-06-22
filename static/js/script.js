@@ -138,3 +138,85 @@ hamburger.addEventListener('click', () => {
     navUl.classList.toggle('active');
     hamburger.classList.toggle('active');
 });
+
+
+const canvas = document.getElementById('stars-bg');
+const ctx = canvas.getContext('2d');
+
+let width, height;
+function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const logicalWidth = window.innerWidth;
+    const logicalHeight = document.getElementById('home').offsetHeight;
+
+    canvas.width = logicalWidth * dpr;
+    canvas.height = logicalHeight * dpr;
+    canvas.style.width = logicalWidth + 'px';
+    canvas.style.height = logicalHeight + 'px';
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+    ctx.scale(dpr, dpr);
+
+    width = logicalWidth;
+    height = logicalHeight;
+    
+}
+
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+const numStars = 100;
+const stars = [];
+
+for (let i = 0; i < numStars; i++) {
+    stars.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        radius: Math.random() * 1.5 + 0.5
+    });
+}
+
+function drawStars() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Draw stars
+    for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+    }
+
+    // Draw lines between close stars
+    for (let i = 0; i < numStars; i++) {
+        for (let j = i + 1; j < numStars; j++) {
+            const dx = stars[i].x - stars[j].x;
+            const dy = stars[i].y - stars[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 100) {
+                ctx.beginPath();
+                ctx.moveTo(stars[i].x, stars[i].y);
+                ctx.lineTo(stars[j].x, stars[j].y);
+                ctx.strokeStyle = `rgba(255,255,255,${1 - dist / 100})`;
+                ctx.stroke();
+            }
+        }
+    }
+
+    // Update positions
+    for (let star of stars) {
+        star.x += star.vx;
+        star.y += star.vy;
+
+        if (star.x < 0 || star.x > width) star.vx *= -1;
+        if (star.y < 0 || star.y > height) star.vy *= -1;
+    }
+
+    requestAnimationFrame(drawStars);
+}
+
+drawStars();
+
+

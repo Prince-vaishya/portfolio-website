@@ -66,7 +66,7 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    transition: background-color 0.3s, color 0.3s, padding 0.3s;
+    transition: backgrountyd-color 0.3s, color 0.3s, padding 0.3s;
     padding: 6px 12px;
     border-radius: 6px;
 }
@@ -520,6 +520,16 @@ footer {
     }
 }
 
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
 .typing-text {
     font-size: 3.5rem;
     font-weight: bold;
@@ -533,3 +543,14 @@ footer {
         font-size: 1.6rem;
     }
 }
+
+#stars-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: black; /* You can use transparent if needed */
+}
+
