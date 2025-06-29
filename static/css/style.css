@@ -710,3 +710,26 @@ body {
         height: 10px; /* Slightly smaller progress bars */
     }
 }
+
+
+.typing-text::after {
+    content: '|';
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.typing-text {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.typing-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}

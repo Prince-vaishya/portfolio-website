@@ -47,16 +47,20 @@ function typeLoop() {
 
     if (!isDeleting && charIndex < currentPhrase.length) {
         charIndex++;
-        setTimeout(typeLoop, 100);
+        setTimeout(typeLoop, 80);
     } else if (isDeleting && charIndex > 0) {
         charIndex--;
-        setTimeout(typeLoop, 40);
+        setTimeout(typeLoop, 30);
     } else {
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            typingTarget.classList.add('active');  // Fade in after typing is done
+        }
+
         isDeleting = !isDeleting;
         if (!isDeleting) {
             phraseIndex = (phraseIndex + 1) % typingPhrases.length;
         }
-        setTimeout(typeLoop, 1200);
+        setTimeout(typeLoop, 800); // Reduced delay between phrases
     }
 }
 
@@ -250,4 +254,5 @@ document.addEventListener('DOMContentLoaded', () => {
         progressObserver.observe(bar);
     });
 });
+
 
